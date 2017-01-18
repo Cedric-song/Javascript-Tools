@@ -49,8 +49,26 @@ compute.div = function (na,nb){
   return m === 0 ? parseInt(mid) : parseFloat(mid)
 }
 
+// 多项求积
+/*
+  @ parameters number or string
+  compute.mulSum()  // throw err
+  compute.mulSum(0) // 0
+  compute.mulSum(0,1,2) // 0
+  compute.mulSum(2,3,4,5) // 120
+  compute.mulSum("2","3")  // 6
+*/
+compute.mulSum = function(){
+  let res = 1
+  let that = this
+  if (arguments && arguments.length > 0) {
+      [].slice.call(arguments).map(function(item) {
+      res = that.mul(item,res)
+    })
+    return res
+  }
 
-console.log(compute.add(1.11,4.44))
-console.log(compute.mul(1.11,4.44))
-console.log(compute.sub(23752.80,16000))
-console.log(compute.div(23752.80,100))
+  throw new Error("you have to input an parameters at least")
+}
+
+
