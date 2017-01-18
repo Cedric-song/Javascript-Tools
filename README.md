@@ -7,3 +7,5 @@ some javascript function in common use written by myself
 
 ## 方法列表
 [***JavaScript浮点数运算***](https://github.com/Cedric-song/Javascript-Tools/blob/master/compute)
+[***JavaScript格式化时间戳***](https://github.com/Cedric-song/Javascript-Tools/blob/master/formatTime)
+
